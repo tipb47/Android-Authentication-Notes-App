@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Project7-master</string>
+    <string name="translation_result">Translation</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="german">German</string>
+    <string name="translationHeader">Translation</string>
+    <string name="source_language">Source Language</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="translate_text_input">Write something...</string>
+    <string name="notes">Notes</string>
+    <string name="save_note">SAVE NOTE</string>
+    <string name="not_registered_yet">Not registered yet?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="sign_up_title">SIGN UP</string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="already_registered">Already registered?</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="re_enter_your_password">Re-enter your password</string>
+    <string name="welcome_to_notes">Welcome to notes!</string>
+</resources>

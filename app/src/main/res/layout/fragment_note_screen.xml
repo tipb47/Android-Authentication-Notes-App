@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NoteScreen">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.project7_master.NoteViewModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notes"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <!--      delete button -->
+                <ImageButton
+                    android:id="@+id/deleteNoteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete"
+                    android:padding="12dp"
+                    android:background="@null"
+                    android:layout_margin="8dp"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={viewModel.note.noteName}" />
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:ems="10"
+            android:textSize="25sp"
+            android:inputType="text"
+            android:text="@={viewModel.note.noteContent}" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/save_note"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true" />
+        <!--        android:onClick="@{() -> viewModel.saveNote(editTextTitle.text.toString(), editTextDescription.text.toString())}" -->
+        <!-- this isnt working, opted for clickListener instead. -->
+
+    </LinearLayout>
+</layout>
